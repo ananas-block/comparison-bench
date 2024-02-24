@@ -1,0 +1,21 @@
+[package]
+name = "comparison-bench"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "comparison_bench"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.28.0"
+fastbloom-rs = {path = "../../../fastbloom/fastbloom-rs"}
+solana-program = "1.16.4"
